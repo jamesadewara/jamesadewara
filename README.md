@@ -10,11 +10,9 @@ Let’s collaborate and build something impactful! 🌟
 
 ### 📫 **Connect with Me:**
 
-[![LinkedIn](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg)](https://www.linkedin.com/in/james-adewara-b0b955290) **[LinkedIn](https://www.linkedin.com/in/james-adewara-b0b955290)**
-
-[![GitHub](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg)](https://github.com/your-username) **[GitHub](https://github.com/your-username)**
-
-[![Upwork](https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Upwork-logo.svg/1200px-Upwork-logo.svg.png)](https://www.upwork.com/freelancers/~your-profile) **[Upwork](https://www.upwork.com/freelancers/~your-profile)**
+[<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" width="64px"/>](https://www.linkedin.com/in/james-adewara-b0b955290)
+[<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" width="64px"/>](https://github.com/your-username)
+[<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Upwork-logo.svg/1200px-Upwork-logo.svg.png" width="64px"/>](https://www.upwork.com/freelancers/~your-profile)
 
 ---
 

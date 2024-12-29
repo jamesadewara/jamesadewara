@@ -17,21 +17,23 @@ Let’s collaborate and build something impactful! 🌟
 
 ### 🛠️ **Languages and Tools:**  
 
-[<img align="left" alt="Python" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" style="padding-right:10px;" />](#)  
-[<img align="left" alt="Django" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" style="padding-right:10px;" />](#)  
-[<img align="left" alt="FastAPI" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" style="padding-right:10px;" />](#)  
-[<img align="left" alt="TensorFlow" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" style="padding-right:10px;" />](#)  
-[<img align="left" alt="React" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" style="padding-right:10px;" />](#)  
-[<img align="left" alt="Flutter" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" style="padding-right:10px;" />](#)  
-[<img align="left" alt="PostgreSQL" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" style="padding-right:10px;" />](#)  
-[<img align="left" alt="Docker" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" style="padding-right:10px;" />](#)  
-[<img align="left" alt="AWS" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" style="padding-right:10px;" />](#)  
-[<img align="left" alt="Git" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" style="padding-right:10px;" />](#)  
+[<img align="left" alt="Python" width="32px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" style="padding-right:15px; border:2px solid #000; border-radius:5px;"/>](#)  
+[<img align="left" alt="Django" width="32px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" style="padding-right:15px; border:2px solid #000; border-radius:5px;"/>](#)  
+[<img align="left" alt="FastAPI" width="32px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" style="padding-right:15px; border:2px solid #000; border-radius:5px;"/>](#)  
+[<img align="left" alt="TensorFlow" width="32px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" style="padding-right:15px; border:2px solid #000; border-radius:5px;"/>](#)  
+[<img align="left" alt="React" width="32px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" style="padding-right:15px; border:2px solid #000; border-radius:5px;"/>](#)  
+[<img align="left" alt="Flutter" width="32px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" style="padding-right:15px; border:2px solid #000; border-radius:5px;"/>](#)  
+[<img align="left" alt="PostgreSQL" width="32px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" style="padding-right:15px; border:2px solid #000; border-radius:5px;"/>](#)  
+[<img align="left" alt="Docker" width="32px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" style="padding-right:15px; border:2px solid #000; border-radius:5px;"/>](#)  
+[<img align="left" alt="AWS" width="32px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" style="padding-right:15px; border:2px solid #000; border-radius:5px;"/>](#)  
+[<img align="left" alt="Git" width="32px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" style="padding-right:15px; border:2px solid #000; border-radius:5px;"/>](#)  
+[<img align="left" alt="Pandas" width="32px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" style="padding-right:15px; border:2px solid #000; border-radius:5px;"/>](#)  
 
 <br />
 <br />
 
 ---
+
 
 ### 📝 **Latest Blog Posts:**  
 

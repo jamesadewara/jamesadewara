@@ -8,12 +8,13 @@ Let’s collaborate and build something impactful! 🌟
 
 ---
 
-### 📫 **Connect with Me:**  
+### 📫 **Connect with Me:**
 
-[![LinkedIn](./img/linkedin-light.svg)](https://www.linkedin.com/in/james-adewara-b0b955290#gh-light-mode-only)  
-[![LinkedIn](./img/linkedin-dark.svg)](https://www.linkedin.com/in/james-adewara-b0b955290#gh-dark-mode-only)  
+[![LinkedIn](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg)](https://www.linkedin.com/in/james-adewara-b0b955290) **[LinkedIn](https://www.linkedin.com/in/james-adewara-b0b955290)**
 
----
+[![GitHub](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg)](https://github.com/your-username) **[GitHub]([https://github.com/your-username](https://github.com/jamesadewara/jamesadewara/edit/main/README.md))**
+
+[![Upwork](https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Upwork-logo.svg/1200px-Upwork-logo.svg.png)](https://www.upwork.com/freelancers/~your-profile) **[Upwork]([https://www.upwork.com/freelancers/~your-profile](https://www.upwork.com/freelancers/~01bcc533c67afd2155?mp_source=share))**
 
 ### 🛠️ **Languages and Tools:**  
 

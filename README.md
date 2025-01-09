@@ -1,6 +1,6 @@
 # 👋 Hi there, I'm **Adewara James** — aka [**Amex**][LinkedIn]
 
-## 🚀 **Backend Developer | AI Enthusiast | Cloud Practitioner**
+## 🚀 **Web Developer | Mobile Developer | AI Enthusiast | Cloud Practitioner**
 
 I specialize in building robust backend systems, developing RESTful APIs, and crafting scalable solutions using **Django**, **FastAPI**, and modern frameworks. With expertise in **AI (TensorFlow)** and **Cloud Technologies**, I create intelligent applications and seamless cloud integrations.
 

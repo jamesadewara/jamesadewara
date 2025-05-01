@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #8b0000;
+            --primary-light: #a52a2a;
+            --secondary: #2c2c2c;
+            --accent: #d4af37;
+            --text: #333333;
+            --text-light: #666666;
+            --bg: #f8f8f8;
+            --card-bg: #ffffff;
+            --border: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', 'Segoe UI', Roboto, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .header:after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 3px;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .badge-container {
+            margin: 2rem 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .badge {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .badge-gold {
+            background-color: #fff8e1;
+            border-color: #ffd54f;
+            color: #ff8f00;
+        }
+
+        .badge-premium {
+            background: linear-gradient(135deg, #8b0000, #a52a2a);
+            color: white;
+            border: none;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .feature-card:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--primary-light));
+        }
+
+        .feature-icon {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .feature-title {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .feature-description {
+            color: var(--text-light);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .feature-list {
+            list-style-type: none;
+            margin-top: 1rem;
+        }
+
+        .feature-list li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .section {
+            margin: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            position: relative;
+            font-weight: 700;
+        }
+
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 3px;
+        }
+
+        .screenshot {
+            border-radius: 12px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+            max-width: 100%;
+            height: auto;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .tech-item {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            width: 120px;
+            transition: transform 0.3s ease;
+        }
+
+        .tech-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .tech-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .tech-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .cta {
+            background: linear-gradient(135deg, #8b0000, #a52a2a);
+            padding: 3rem 2rem;
+            border-radius: 16px;
+            text-align: center;
+            color: white;
+            margin: 4rem 0;
+            box-shadow: 0 15px 50px rgba(139, 0, 0, 0.2);
+        }
+
+        .cta-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .cta-description {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            background-color: var(--accent);
+            color: var(--secondary);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .comparison {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 2rem 0;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .comparison th, .comparison td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .comparison th {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .comparison tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+
+        .check {
+            color: #4caf50;
+            font-size: 1.2rem;
+        }
+
+        .cross {
+            color: #f44336;
+            font-size: 1.2rem;
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+
+        .testimonial:before {
+            content: """;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 5rem;
+            color: var(--primary);
+            opacity: 0.1;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .author-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .author-name {
+            font-weight: 600;
+        }
+
+        .author-role {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .faq {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 5rem;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border);
+            color: var(--text-light);
+        }
+
+        @media (max-width: 768px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .cta-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">MultiAI Chat Platform</h1>
+            <p class="subtitle">Premium React template for creating sophisticated multi-AI chatbot interfaces with an elegant wine-inspired design system</p>
+            
+            <div class="badge-container">
+                <span class="badge badge-premium">Premium Template</span>
+                <span class="badge">React.js</span>
+                <span class="badge">TypeScript</span>
+                <span class="badge">Responsive Design</span>
+                <span class="badge badge-gold">Easy to Customize</span>
+            </div>
+        </div>
+
+        <img src="screenshots/multiai/inline-image.jpeg" alt="MultiAI Chat Platform Preview" class="screenshot">
+
+        <div class="section">
+            <h2 class="section-title">All-in-One AI Chat Experience</h2>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3 class="feature-title">Multiple AI Integration</h3>
+                    <p class="feature-description">Connect to various AI models through a single elegant interface. Support for:</p>
+                    <ul class="feature-list">
+                        <li>OpenAI (ChatGPT)</li>
+                        <li>Anthropic (Claude)</li>
+                        <li>DeepSeek</li>
+                        <li>Google Gemini</li>
+                        <li>And more, easily extendable</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3 class="feature-title">Advanced Chat Features</h3>
+                    <p class="feature-description">Complete messaging experience with all the features your users expect:</p>
+                    <ul class="feature-list">
+                        <li>Full Markdown rendering</li>
+                        <li>Code syntax highlighting</li>
+                        <li>Conversation history</li>
+                        <li>Message search functionality</li>
+                        <li>Copy-to-clipboard support</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3 class="feature-title">Distinguished Design System</h3>
+                    <p class="feature-description">Stand out with our premium wine-inspired UI:</p>
+                    <ul class="feature-list">
+                        <li>Rich burgundy color palette</li>
+                        <li>Glass morphism effects</li>
+                        <li>Elegant micro-interactions</li>
+                        <li>Shimmer loading animations</li>
+                        <li>Light & dark themes</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Complete User Journey</h3>
+                    <p class="feature-description">Everything you need to launch your AI service:</p>
+                    <ul class="feature-list">
+                        <li>Marketing landing page</li>
+                        <li>Authentication system</li>
+                        <li>User settings & profiles</li>
+                        <li>Subscription management</li>
+                        <li>Onboarding flow</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Fully Responsive</h3>
+                    <p class="feature-description">Perfect experience on any device:</p>
+                    <ul class="feature-list">
+                        <li>Mobile-first approach</li>
+                        <li>Tablet optimized layouts</li>
+                        <li>Desktop productivity features</li>
+                        <li>Adaptive UI elements</li>
+                        <li>Touch-friendly controls</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3 class="feature-title">Developer-Friendly</h3>
+                    <p class="feature-description">Built with the developer experience in mind:</p>
+                    <ul class="feature-list">
+                        <li>Clean, modular code</li>
+                        <li>TypeScript for type safety</li>
+                        <li>Extensive documentation</li>
+                        <li>Mock data implementation</li>
+                        <li>Easy API integration points</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Why Choose MultiAI?</h2>
+            
+            <table class="comparison">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Basic AI Templates</th>
+                        <th>MultiAI Platform</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Multiple AI Services Support</td>
+                        <td><span class="cross">✕</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>Premium Wine-Inspired Design</td>
+                        <td><span class="cross">✕</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>Full Markdown & Code Support</td>
+                        <td><span class="cross">✕</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>Complete User Authentication</td>
+                        <td><span class="cross">✕</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>Marketing Landing Page</td>
+                        <td><span class="cross">✕</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>Light & Dark Themes</td>
+                        <td><span class="cross">✕</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>Conversation Management</td>
+                        <td><span class="cross">✕</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>TypeScript Implementation</td>
+                        <td><span class="cross">✕</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Product Highlights</h2>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3 class="feature-title">Ready to Launch</h3>
+                    <p class="feature-description">Everything you need to get your AI chat application online in minutes. Just connect your AI service APIs and you're ready to go.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💯</div>
+                    <h3 class="feature-title">Premium Code Quality</h3>
+                    <p class="feature-description">Built with modern React best practices, clean architecture, and performance in mind. No spaghetti code or technical debt.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3 class="feature-title">Easy Customization</h3>
+                    <p class="feature-description">Well-structured codebase with clear separation of concerns makes it easy to modify and extend the template to your specific needs.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Technology Stack</h2>
+            
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <div class="tech-icon">⚛️</div>
+                    <div class="tech-name">React</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">📝</div>
+                    <div class="tech-name">TypeScript</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🎨</div>
+                    <div class="tech-name">CSS Modules</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🔄</div>
+                    <div class="tech-name">React Router</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">💾</div>
+                    <div class="tech-name">Local Storage</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🔍</div>
+                    <div class="tech-name">Context API</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta">
+            <h2 class="cta-title">Launch Your AI Chat Platform Today</h2>
+            <p class="cta-description">Stand out from the competition with MultiAI's premium design and comprehensive features. Save weeks of development time and deliver an exceptional user experience.</p>
+            <a href="#" class="btn">Purchase Now</a>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">What's Included</h2>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">📄</div>
+                    <h3 class="feature-title">Source Files</h3>
+                    <ul class="feature-list">
+                        <li>React components</li>
+                        <li>TypeScript definitions</li>
+                        <li>Style modules</li>
+                        <li>Mock data</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3 class="feature-title">Documentation</h3>
+                    <ul class="feature-list">
+                        <li>Installation guide</li>
+                        <li>Customization instructions</li>
+                        <li>API integration tutorials</li>
+                        <li>Component reference</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🛠️</div>
+                    <h3 class="feature-title">Development Setup</h3>
+                    <ul class="feature-list">
+                        <li>Vite configuration</li>
+                        <li>ESLint & Prettier setup</li>
+                        <li>Build scripts</li>
+                        <li>Development server</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq">
+                <div class="faq-item">
+                    <div class="faq-question">Do I need coding experience to use this template?</div>
+                    <div class="faq-answer">Basic knowledge of React and web development is recommended to effectively customize and deploy the template. However, the codebase is well-documented and organized to make modifications as straightforward as possible.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What AI providers can I integrate with?</div>
+                    <div class="faq-answer">The template is designed to work with any API-based AI service. It comes with mock implementations that can be easily replaced with real API calls to services like OpenAI, Anthropic, DeepSeek, Google, and others.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Is the template responsive on mobile devices?</div>
+                    <div class="faq-answer">Yes, MultiAI features a mobile-first design approach and is fully responsive across all device sizes from smartphones to large desktop monitors.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Does this include backend services?</div>
+                    <div class="faq-answer">This is a frontend template only. It includes client-side storage using LocalStorage and is designed to be easily connected to your own backend services or third-party APIs.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What kind of support is provided?</div>
+                    <div class="faq-answer">Purchase includes 6 months of support for bug fixes. Customization and integration assistance is available at additional rates.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">What Customers Are Saying</h2>
+            
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p class="testimonial-text">This template saved us weeks of development time. The code quality is outstanding and the design is simply beautiful. Our clients love the premium feel.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div class="author-info">
+                            <div class="author-name">John D.</div>
+                            <div class="author-role">Web Developer</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">The multi-AI integration was exactly what we needed. We were able to launch our AI service in just days instead of months. Highly recommended!</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <div class="author-name">Sarah M.</div>
+                            <div class="author-role">Tech Entrepreneur</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">Clean code, beautiful design, and excellent documentation. This template stands out from everything else on the market. Worth every penny.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RK</div>
+                        <div class="author-info">
+                            <div class="author-name">Robert K.</div>
+                            <div class="author-role">Product Manager</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>MultiAI Chat Platform | Premium React Template</p>
+        </div>
+    </div>
+</body>
+</html>

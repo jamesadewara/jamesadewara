@@ -1,39 +1,51 @@
 # 👋 Hi there, I'm **Adewara James** — aka **Amex**
 
-## 🚀 **Web Developer | Mobile Developer | AI Enthusiast | Cloud Practitioner**
+## 🚀 **Full-Stack Developer | Mobile Developer | AI Enthusiast | Cloud Practitioner**
 
-I am passionate about building scalable solutions that align with business needs. With a focus on crafting intelligent applications and seamless cloud integrations, I specialize in developing **robust web, mobile, and AI systems**. I leverage **Django**, **FastAPI**, **Angular**, **AI (TensorFlow)**, and **Cloud Technologies** to deliver solutions that not only scale efficiently but also support business growth.
+I build scalable solutions that align with business needs, specializing in:
+- **Frontend**: React, Angular, TypeScript
+- **Backend**: Django, FastAPI, Node.js  
+- **Mobile**: Flutter, React Native
+- **AI/ML**: TensorFlow, PyTorch
+- **Cloud**: AWS, Docker, CI/CD
 
-Let’s collaborate to create impactful solutions that make a difference! 🌟
-
----
-
-### 📫 **Connect with Me:**
-
-[![LinkedIn](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg)](https://www.linkedin.com/in/james-adewara-b0b955290)
-[![GitHub](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg)](https://github.com/jamesadewara/jamesadewara/edit/main/README.md)
+Let's create impactful solutions together! 🌟
 
 ---
 
-### 🛠️ **Languages and Tools:**
-
-[![Python](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg)](#)  
-[![Django](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg)](#)  
-[![FastAPI](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg)](#)  
-[![TensorFlow](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg)](#)  
-[![Angular](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg)](#)  
-[![Flutter](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg)](#)  
-[![PostgreSQL](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg)](#)  
-[![Docker](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg)](#)  
-[![AWS](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg)](#)  
-[![Git](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg)](#)  
-[![Pandas](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg)](#)
+### 🌐 **My Digital Presence**
+[![Portfolio Website](https://img.shields.io/badge/🚀_Portfolio-000000?style=for-the-badge)](https://jamesadewara.github.io/jamesadewara/index.html)
+[![Interactive Resume](https://img.shields.io/badge/📄_Resume-000000?style=for-the-badge)](https://jamesadewara.github.io/jamesadewara/resume_html.html)
 
 ---
 
-### 📝 **Latest Blog Posts:**
+### 🛠️ **Core Technologies**
 
-- [**Journey to Building a Diabetes Prediction App in a Day: A Comprehensive Guide**](https://www.linkedin.com/posts/james-adewara-b0b955290_this-article-chronicles-the-journey-of-creating-activity-7180493093098446849-r8i9?utm_source=share&utm_medium=member_desktop)  
-- [**Building a Mini Chatbot with Python, PyTorch, spaCy, and Pandas: A Step-by-Step Guide**](https://www.linkedin.com/posts/james-adewara-b0b955290_python-pytorch-spacy-activity-7182092380798337024-EE6F?utm_source=share&utm_medium=member_desktop)
+#### Frontend
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](#)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](#)
+[![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)](#)
 
-➡️ [**More Blog Posts...**](https://www.linkedin.com/in/james-adewara-b0b955290/recent-activity/all/)
+#### Backend/AI
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](#)
+[![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)](#)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](#)
+
+#### Mobile & Cloud
+[![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](#)
+[![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)](#)
+
+---
+
+### 📫 **Let's Connect**
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/james-adewara-b0b955290)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jamesadewara)
+
+---
+
+### 📝 **Recent Articles**
+- [Building a Diabetes Prediction App in a Day](https://www.linkedin.com/posts/james-adewara-b0b955290_this-article-chronicles-the-journey-of-creating-activity-7180493093098446849-r8i9)
+- [Python Chatbot with PyTorch & spaCy](https://www.linkedin.com/posts/james-adewara-b0b955290_python-pytorch-spacy-activity-7182092380798337024-EE6F)
+- [React + TypeScript Best Practices](https://www.linkedin.com/your-article-here) *(new!)*
+
+➡️ [More on LinkedIn...](https://www.linkedin.com/in/james-adewara-b0b955290/recent-activity/all/)

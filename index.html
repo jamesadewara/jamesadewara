@@ -23,6 +23,8 @@
             --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
             --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             --transition: all 0.3s ease;
+            --header-height: 70px;
+            --url-height: 56px;
         }
         
         * {
@@ -54,7 +56,14 @@
             justify-content: space-between;
             align-items: center;
             box-shadow: var(--shadow-md);
-            z-index: 10;
+            z-index: 100;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            transition: transform 0.3s ease;
+            will-change: transform;
         }
         
         .header-title {
@@ -148,6 +157,8 @@
             width: 100%;
             overflow: hidden;
             background-color: var(--bg-dark);
+            margin-top: var(--header-height);
+            height: calc(100vh - var(--header-height) - var(--url-height));
         }
         
         iframe {
@@ -199,8 +210,15 @@
             gap: 0.75rem;
             font-size: 0.95rem;
             overflow: hidden;
-            transition: var(--transition);
-            position: relative;
+            transition: transform 0.3s ease;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: var(--url-height);
+            z-index: 90;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            will-change: transform;
         }
         
         .url-label {
@@ -288,6 +306,7 @@
             text-align: center;
             font-size: 0.9rem;
             font-weight: 300;
+            margin-bottom: var(--url-height);
         }
         
         footer a {
@@ -300,12 +319,26 @@
             text-decoration: underline;
         }
         
+        /* Header and URL display scroll behavior */
+        header.hidden {
+            transform: translateY(-100%);
+        }
+        
+        .url-display.hidden {
+            transform: translateY(100%);
+        }
+        
         /* Responsive styles */
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
                 gap: 1rem;
                 padding: 0.75rem;
+                height: auto;
+            }
+            
+            :root {
+                --header-height: 110px;
             }
             
             .controls {
@@ -373,7 +406,7 @@
 </head>
 <body>
     <div class="container">
-        <header>
+        <header class="hidden">
             <div class="header-title">
                 <i class="fas fa-code"></i>
                 James Adewara - Portfolio Explorer
@@ -403,7 +436,7 @@
             <iframe id="website-frame" title="Project Display"></iframe>
         </div>
         
-        <div class="url-display">
+        <div class="url-display hidden">
             <div class="url-label">
                 <i class="fas fa-link"></i>
                 Current Project:
@@ -434,6 +467,8 @@
             const currentUrl = document.getElementById('current-url');
             const copyUrlBtn = document.getElementById('copy-url');
             const toast = document.getElementById('toast');
+            const header = document.querySelector('header');
+            const urlDisplay = document.querySelector('.url-display');
             
             // Fetch projects from JSON
             async function fetchProjects() {
@@ -570,15 +605,95 @@
                 }
             });
             
+            // Scroll behavior for header and URL display
+            let lastScrollTop = 0;
+            let scrollTimer = null;
+            
+            function handleScroll() {
+                const scrollTop = window.scrollY || document.documentElement.scrollTop;
+                
+                // Detect scroll direction
+                if (scrollTop > lastScrollTop) {
+                    // Scrolling down
+                    header.classList.add('hidden');
+                    urlDisplay.classList.add('hidden');
+                } else if (scrollTop < lastScrollTop) {
+                    // Scrolling up
+                    header.classList.remove('hidden');
+                    urlDisplay.classList.remove('hidden');
+                }
+                
+                lastScrollTop = scrollTop;
+                
+                // Clear any existing timer
+                clearTimeout(scrollTimer);
+                
+                // Set a timer to show elements after scrolling stops
+                scrollTimer = setTimeout(() => {
+                    header.classList.remove('hidden');
+                    urlDisplay.classList.remove('hidden');
+                }, 1500);
+            }
+            
+            // Add scroll event listener
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            
+            // Add mousemove event to show header/footer when mouse is near edges
+            iframe.addEventListener('mousemove', (e) => {
+                const mouseY = e.clientY;
+                const windowHeight = window.innerHeight;
+                
+                if (mouseY < 50) {
+                    // Near top edge
+                    header.classList.remove('hidden');
+                } else if (mouseY > windowHeight - 50) {
+                    // Near bottom edge
+                    urlDisplay.classList.remove('hidden');
+                }
+            });
+            
+            // Initial display of header and URL bar
+            setTimeout(() => {
+                header.classList.remove('hidden');
+                urlDisplay.classList.remove('hidden');
+            }, 300);
+            
             // Trigger resize event to set initial state
             window.dispatchEvent(new Event('resize'));
             
-            // Load first project by default
-            if (websiteSelector.options.length > 1) {
-                websiteSelector.selectedIndex = 1;
-                loadWebsite(websiteSelector.value);
+        // Improve scroll behavior with proper event handling
+        iframe.addEventListener('load', () => {
+            // Access the iframe content for scroll events if same-origin
+            try {
+                const iframeContent = iframe.contentWindow || iframe.contentDocument;
+                
+                // Try to add scroll listener to iframe content if possible
+                try {
+                    iframeContent.addEventListener('scroll', handleScroll, { passive: true });
+                } catch (e) {
+                    console.log("Could not add scroll listener to iframe content - using fallback");
+                }
+                
+                // Also try to add mousemove listener to iframe content
+                try {
+                    iframeContent.addEventListener('mousemove', (e) => {
+                        const mouseY = e.clientY;
+                        const windowHeight = iframeContent.innerHeight || window.innerHeight;
+                        
+                        if (mouseY < 50) {
+                            header.classList.remove('hidden');
+                        } else if (mouseY > windowHeight - 50) {
+                            urlDisplay.classList.remove('hidden');
+                        }
+                    });
+                } catch (e) {
+                    console.log("Could not add mousemove listener to iframe content");
+                }
+            } catch (e) {
+                console.log("Cross-origin iframe - using window events only");
             }
+        });
         });
     </script>
 </body>
-                            </html>
+</html>

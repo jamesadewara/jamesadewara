@@ -4,10 +4,11 @@
 
 I build scalable solutions that align with business needs, specializing in:
 - **Frontend**: React, Angular, TypeScript
-- **Backend**: Django, FastAPI, Node.js  
+- **Backend**: Django, Node.js  
 - **Mobile**: Flutter, React Native
-- **AI/ML**: TensorFlow, PyTorch
+- **AI/ML**: PyTorch
 - **Cloud**: AWS, Docker, CI/CD
+- **Automation**: n8n, python
 
 Let's create impactful solutions together! 🌟
 

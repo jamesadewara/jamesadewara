@@ -47,6 +47,5 @@ Let's create impactful solutions together! 🌟
 ### 📝 **Recent Articles**
 - [Building a Diabetes Prediction App in a Day](https://www.linkedin.com/posts/james-adewara-b0b955290_this-article-chronicles-the-journey-of-creating-activity-7180493093098446849-r8i9)
 - [Python Chatbot with PyTorch & spaCy](https://www.linkedin.com/posts/james-adewara-b0b955290_python-pytorch-spacy-activity-7182092380798337024-EE6F)
-- [React + TypeScript Best Practices](https://www.linkedin.com/your-article-here) *(new!)*
 
 ➡️ [More on LinkedIn...](https://www.linkedin.com/in/james-adewara-b0b955290/recent-activity/all/)

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Ayomide Adewara - Frontend Developer Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .resume-container {
+            max-width: 210mm;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            position: relative;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid rgba(255,255,255,0.2);
+            object-fit: cover;
+        }
+
+        .name-title {
+            flex: 1;
+        }
+
+        .name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .title {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+
+        .contact-icon {
+            width: 16px;
+            height: 16px;
+            opacity: 0.8;
+        }
+
+        .main-content {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            break-inside: avoid;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e9ecef;
+            position: relative;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #667eea;
+        }
+
+        .about-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+            text-align: justify;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .skill-category h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .skill-category p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .project {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .project-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .project-date {
+            font-size: 0.9rem;
+            color: #667eea;
+            font-weight: 500;
+        }
+
+        .project-link {
+            font-size: 0.85rem;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        .project-description {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .project-tech {
+            font-size: 0.85rem;
+            color: #667eea;
+            font-weight: 500;
+        }
+
+        .project-learning {
+            font-size: 0.85rem;
+            color: #28a745;
+            font-style: italic;
+            margin-top: 8px;
+        }
+
+        .strengths-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .strength-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 6px;
+        }
+
+        .strength-bullet {
+            width: 8px;
+            height: 8px;
+            background: #667eea;
+            border-radius: 50%;
+            margin-top: 6px;
+            flex-shrink: 0;
+        }
+
+        .strength-text {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .learning-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .learning-item {
+            background: #e3f2fd;
+            padding: 12px;
+            border-radius: 6px;
+            border-left: 3px solid #2196f3;
+        }
+
+        .learning-item h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #1976d2;
+            margin-bottom: 5px;
+        }
+
+        .learning-item p {
+            font-size: 0.85rem;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        .footer-section {
+            background: #f8f9fa;
+            padding: 20px 30px;
+            border-top: 1px solid #e9ecef;
+            text-align: center;
+        }
+
+        .footer-text {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .resume-container {
+                box-shadow: none;
+                margin: 0;
+                max-width: none;
+            }
+            
+            .section {
+                break-inside: avoid;
+            }
+            
+            .project {
+                break-inside: avoid;
+            }
+        }
+
+        @page {
+            margin: 0.5in;
+            size: A4;
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="profile-section">
+                <img src="https://lh3.googleusercontent.com/a/ACg8ocI1E6dmIwVwvatG3YOaswzMja-P9GLSsdnks6b7V5P9_5gMSfLG=s288-c-rg-br100" 
+                     alt="James Ayomide Adewara" 
+                     class="profile-image">
+                <div class="name-title">
+                    <h1 class="name">JAMES AYOMIDE ADEWARA</h1>
+                    <p class="title">Junior Frontend Developer | UI Enthusiast | Web Developer</p>
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>✉</span>
+                    <span>jamesadewara1@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <span>☏</span>
+                    <span>+2349138113769</span>
+                </div>
+                <div class="contact-item">
+                    <span>🔗</span>
+                    <a href="https://linkedin.com/in/james-adewara-b0b955290" style="color: white; text-decoration: none;">LinkedIn Profile</a>
+                </div>
+                <div class="contact-item">
+                    <span>💻</span>
+                    <a href="https://github.com/jamesadewara" style="color: white; text-decoration: none;">GitHub Portfolio</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- About Me Section -->
+            <div class="section">
+                <h2 class="section-title">ABOUT ME</h2>
+                <p class="about-text">
+                    Self-taught Frontend Developer passionate about creating beautiful, responsive web experiences. Currently building my skills through hands-on projects and seeking opportunities to grow as a junior developer. Eager to contribute to a team while continuing to learn modern web development practices and technologies.
+                </p>
+            </div>
+
+            <!-- Technical Skills -->
+            <div class="section">
+                <h2 class="section-title">TECHNICAL SKILLS</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Languages & Markup</h4>
+                        <p>HTML5, CSS3, JavaScript (ES6+), TypeScript (Learning)</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Frameworks & Libraries</h4>
+                        <p>Angular (Intermediate), React (Learning), TailwindCSS, Material Design</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Tools & Workflow</h4>
+                        <p>Git & GitHub, VS Code, Responsive Design, Basic SEO principles</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Currently Learning</h4>
+                        <p>Advanced JavaScript, Modern CSS, Web Performance, React Ecosystem</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Projects -->
+            <div class="section">
+                <h2 class="section-title">RECENT PROJECTS</h2>
+                
+                <div class="project">
+                    <div class="project-header">
+                        <h3 class="project-title">Client Portfolio Website</h3>
+                        <span class="project-date">2025</span>
+                    </div>
+                    <a href="https://oluwamuyiwa.onrender.com/" class="project-link">🌐 Live Site: oluwamuyiwa.onrender.com</a>
+                    <p class="project-description">
+                        Built responsive portfolio website for a brand & advertising designer. Implemented modern design principles with clean, professional layout using HTML, CSS, and JavaScript to create smooth user experience. Deployed using Render with custom domain configuration.
+                    </p>
+                    <p class="project-tech"><strong>Technologies:</strong> HTML5, CSS3, JavaScript, Render Deployment</p>
+                    <p class="project-learning"><strong>Learning Highlights:</strong> Client communication, design implementation, deployment workflows</p>
+                </div>
+
+                <div class="project">
+                    <div class="project-header">
+                        <h3 class="project-title">Personal Portfolio & Resume</h3>
+                        <span class="project-date">2024-2025</span>
+                    </div>
+                    <a href="https://jamesadewara.github.io/jamesadewara/resume_html.html" class="project-link">🌐 Live Site: Portfolio</a>
+                    <p class="project-description">
+                        Created personal portfolio showcasing projects and skills. Built responsive design that works across desktop, tablet, and mobile. Implemented smooth animations and interactive elements.
+                    </p>
+                    <p class="project-tech"><strong>Technologies:</strong> HTML5, CSS3, JavaScript, GitHub Pages</p>
+                    <p class="project-learning"><strong>Learning Highlights:</strong> Responsive design, CSS animations, version control</p>
+                </div>
+
+                <div class="project">
+                    <div class="project-header">
+                        <h3 class="project-title">Task Manager Application</h3>
+                        <span class="project-date">Learning Project</span>
+                    </div>
+                    <a href="https://github.com/jamesadewara/Task-Manager-with-Angular" class="project-link">💻 GitHub Repository</a>
+                    <p class="project-description">
+                        Building a simple task management app using Angular. Learning component-based architecture and data binding. Implementing CRUD operations with local storage.
+                    </p>
+                    <p class="project-tech"><strong>Technologies:</strong> Angular, TypeScript, Material Design</p>
+                    <p class="project-learning"><strong>Learning Highlights:</strong> Modern JavaScript frameworks, component lifecycle</p>
+                </div>
+            </div>
+
+            <!-- What I'm Looking For -->
+            <div class="section">
+                <h2 class="section-title">WHAT I'M LOOKING FOR</h2>
+                <div class="learning-items">
+                    <div class="learning-item">
+                        <h4>Entry-Level Position</h4>
+                        <p>Frontend Developer role where I can contribute while learning</p>
+                    </div>
+                    <div class="learning-item">
+                        <h4>Mentorship</h4>
+                        <p>Work with experienced developers and learn best practices</p>
+                    </div>
+                    <div class="learning-item">
+                        <h4>Growth Environment</h4>
+                        <p>Team that encourages continuous learning and development</p>
+                    </div>
+                    <div class="learning-item">
+                        <h4>Modern Technologies</h4>
+                        <p>Projects involving responsive design and modern web tech</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strengths & Qualities -->
+            <div class="section">
+                <h2 class="section-title">STRENGTHS & QUALITIES</h2>
+                <div class="strengths-grid">
+                    <div class="strength-item">
+                        <div class="strength-bullet"></div>
+                        <span class="strength-text"><strong>Self-motivated learner</strong> with proven ability to pick up new technologies</span>
+                    </div>
+                    <div class="strength-item">
+                        <div class="strength-bullet"></div>
+                        <span class="strength-text"><strong>Problem-solving mindset</strong> - enjoy breaking down complex problems</span>
+                    </div>
+                    <div class="strength-item">
+                        <div class="strength-bullet"></div>
+                        <span class="strength-text"><strong>Attention to detail</strong> in implementing designs and user interfaces</span>
+                    </div>
+                    <div class="strength-item">
+                        <div class="strength-bullet"></div>
+                        <span class="strength-text"><strong>Eager to collaborate</strong> and learn from experienced team members</span>
+                    </div>
+                    <div class="strength-item">
+                        <div class="strength-bullet"></div>
+                        <span class="strength-text"><strong>Adaptable</strong> and open to feedback for continuous improvement</span>
+                    </div>
+                    <div class="strength-item">
+                        <div class="strength-bullet"></div>
+                        <span class="strength-text"><strong>Passion for web development</strong> and creating great user experiences</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-section">
+            <p class="footer-text">
+                <strong>Career Goal:</strong> To grow into a skilled Frontend Developer by contributing to meaningful projects, learning from experienced developers, and building user-friendly web applications that make a positive impact.
+            </p>
+        </div>
+    </div>
+</body>
+  </html>

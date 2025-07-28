@@ -1,0 +1,47 @@
+[
+  {
+    "name": "James Resume",
+    "media": "pdf",
+    "url": "https://jamesadewara.github.io/jamesadewara/assets/files/james_resume.pdf"
+  },
+  {
+    "name": "James - GitHub Portfolio",
+    "media": "github",
+    "url": "https://jamesadewara.github.io/jamesadewara"
+  },
+  {
+    "name": "James LinkedIn",
+    "media": "linkedin",
+    "url": "https://ng.linkedin.com/in/adewara-james-074989257"
+  },
+  {
+    "name": "The Breakout Code",
+    "media": "website",
+    "url": "https://fanciful-cascaron-c30be0.netlify.app/"
+  },
+  {
+    "name": "MultiAI",
+    "media": "website",
+    "url": "https://multi-ai-7u3e.onrender.com/"
+  },
+  {
+    "name": "Oluwamuyiwa's Portfolio",
+    "media": "website",
+    "url": "https://oluwamuyiwa.onrender.com/"
+  },
+  {
+    "name": "Portfolio Page Loader",
+    "media": "website",
+    "url": "https://jamesadewara.github.io/jamesadewara/index.html"
+  },
+  {
+    "name": "EMS Demo Video",
+    "media": "desktop",
+    "url": "https://youtu.be/4PBEJXcttVY"
+  },
+  {
+    "name": "Flutter CV2 Camera Plugin",
+    "media": "plugin",
+    "url": "https://pub.dev/packages/flutter_cv2_camera"
+  }
+]

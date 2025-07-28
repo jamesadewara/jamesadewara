@@ -16,8 +16,7 @@ Let's create impactful solutions together! 🌟
 
 ### 🌐 **My Digital Presence**
 [![Portfolio Website](https://img.shields.io/badge/🚀_Portfolio-000000?style=for-the-badge)](https://jamesadewara.github.io/jamesadewara/index.html)
-[![Interactive Resume](https://img.shields.io/badge/📄_Resume-000000?style=for-the-badge)](https://jamesadewara.github.io/jamesadewara/resume_html.html)
-
+[![Interactive Resume](https://img.shields.io/badge/📄_Resume-000000?style=for-the-badge)](https://jamesadewara.github.io/jamesadewara/)
 ---
 
 ### 🛠️ **Core Technologies**

@@ -40,7 +40,7 @@ Let's create impactful solutions together! 🌟
 
 ### 📫 **Let's Connect**
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/james-adewara-b0b955290)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jamesadewara)
+[![GitHub](https://jamesadewara.github.io/jamesadewara/assets/files/james_resume.pdf)
 
 ---
 

@@ -42,6 +42,6 @@
   {
     "name": "Flutter CV2 Camera Plugin",
     "media": "plugin",
-    "url": "https://pub.dev/packages/flutter_cv2_camera"
+    "url": "https://github.com/jamesadewara/flutter_cv2_camera"
   }
 ]

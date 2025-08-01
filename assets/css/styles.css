@@ -734,6 +734,13 @@ body {
     .status-bar {
         padding: 0 1rem;
     }
+
+    #status-resizer {
+  height: 5px;
+  background: #333;
+  cursor: row-resize;
+  user-select: none;
+}
     
     .project-url {
         max-width: 200px;
@@ -755,6 +762,12 @@ body {
         padding: 0.75rem;
         gap: 0.5rem;
     }
+    #status-resizer {
+  height: 5px;
+  background: #333;
+  cursor: row-resize;
+  user-select: none;
+}
     
     .current-project {
         width: 100%;

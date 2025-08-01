@@ -40,7 +40,7 @@
 <body>
     <div class="app-container">
         <!-- Sidebar -->
-        <aside class="sidebar" id="sidebar">
+        <aside class="sidebar user-select-none" id="sidebar">
             <button class="collapse-btn" id="collapse-btn" title="Collapse Sidebar">
                 <i class="fas fa-chevron-left"></i>
             </button>
@@ -140,10 +140,11 @@
                     </button>
                 </div>
             </div>
+            <div id="status-resizer"></div>
         </main>
 
         <!-- Floating Controls -->
-        <div class="floating-controls" id="floating-controls">
+        <div class="floating-controls user-select-none" id="floating-controls">
             <button class="floating-btn" id="toggle-sidebar" title="Toggle Sidebar">
                 <i class="fas fa-bars"></i>
             </button>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dorcas You Shine - Wedding Background</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .wedding-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(45deg, #ffeef8, #fff5e6, #f0f8ff);
+            overflow: hidden;
+        }
+
+        /* Floating hearts */
+        .heart {
+            position: absolute;
+            color: rgba(255, 192, 203, 0.6);
+            font-size: 20px;
+            animation: float-hearts 15s infinite ease-in-out;
+        }
+
+        .heart:nth-child(odd) {
+            animation-delay: -5s;
+            color: rgba(255, 215, 0, 0.5);
+        }
+
+        .heart:nth-child(3n) {
+            animation-delay: -10s;
+            color: rgba(255, 182, 193, 0.7);
+        }
+
+        /* Golden light rays */
+        .light-ray {
+            position: absolute;
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
+            transform-origin: left center;
+            animation: light-sweep 20s infinite linear;
+        }
+
+        .light-ray:nth-child(2n) {
+            animation-delay: -10s;
+        }
+
+        /* Gentle dew particles */
+        .dew-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(135, 206, 235, 0.4));
+            border-radius: 50%;
+            animation: dew-sparkle 12s infinite ease-in-out;
+        }
+
+        /* Spiritual glow elements */
+        .spiritual-glow {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+            border-radius: 50%;
+            animation: spiritual-pulse 18s infinite ease-in-out;
+        }
+
+        /* Foundation stones */
+        .foundation {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, rgba(139, 69, 19, 0.1), transparent);
+            animation: foundation-strengthen 24s infinite ease-in-out;
+        }
+
+        /* Joy bubbles */
+        .joy-bubble {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.3), rgba(255, 192, 203, 0.2));
+            border-radius: 50%;
+            animation: joy-rise 16s infinite ease-in-out;
+        }
+
+        /* Grace rain */
+        .grace-drop {
+            position: absolute;
+            width: 2px;
+            height: 15px;
+            background: linear-gradient(to bottom, rgba(135, 206, 235, 0.6), transparent);
+            animation: gentle-rain 14s infinite linear;
+        }
+
+        /* Celebration sparkles */
+        .celebration-spark {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.8), transparent);
+            border-radius: 50%;
+            animation: spark-celebration 10s infinite ease-in-out;
+        }
+
+        /* Keyframe animations */
+        @keyframes float-hearts {
+            0%, 100% { 
+                transform: translateY(100vh) rotate(0deg); 
+                opacity: 0; 
+            }
+            10% { opacity: 0.8; }
+            90% { opacity: 0.8; }
+            50% { 
+                transform: translateY(-10vh) rotate(180deg); 
+                opacity: 1; 
+            }
+        }
+
+        @keyframes light-sweep {
+            0% { 
+                transform: rotate(-45deg) translateX(-200vw); 
+                opacity: 0; 
+            }
+            20% { opacity: 0.6; }
+            80% { opacity: 0.6; }
+            100% { 
+                transform: rotate(-45deg) translateX(200vw); 
+                opacity: 0; 
+            }
+        }
+
+        @keyframes dew-sparkle {
+            0%, 100% { 
+                transform: scale(0) rotate(0deg); 
+                opacity: 0; 
+            }
+            50% { 
+                transform: scale(1.5) rotate(180deg); 
+                opacity: 1; 
+            }
+        }
+
+        @keyframes spiritual-pulse {
+            0%, 100% { 
+                transform: scale(0.5); 
+                opacity: 0.1; 
+            }
+            50% { 
+                transform: scale(1.2); 
+                opacity: 0.3; 
+            }
+        }
+
+        @keyframes foundation-strengthen {
+            0%, 100% { 
+                opacity: 0.3; 
+                transform: scaleY(1); 
+            }
+            50% { 
+                opacity: 0.6; 
+                transform: scaleY(1.1); 
+            }
+        }
+
+        @keyframes joy-rise {
+            0% { 
+                transform: translateY(100vh) scale(0); 
+                opacity: 0; 
+            }
+            20% { 
+                opacity: 0.8; 
+                transform: translateY(80vh) scale(1); 
+            }
+            80% { 
+                opacity: 0.8; 
+                transform: translateY(20vh) scale(0.8); 
+            }
+            100% { 
+                transform: translateY(-10vh) scale(0); 
+                opacity: 0; 
+            }
+        }
+
+        @keyframes gentle-rain {
+            0% { 
+                transform: translateY(-20px); 
+                opacity: 0; 
+            }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.6; }
+            100% { 
+                transform: translateY(100vh); 
+                opacity: 0; 
+            }
+        }
+
+        @keyframes spark-celebration {
+            0%, 100% { 
+                transform: scale(0) rotate(0deg); 
+                opacity: 0; 
+            }
+            25% { 
+                transform: scale(1) rotate(90deg); 
+                opacity: 1; 
+            }
+            75% { 
+                transform: scale(1.5) rotate(270deg); 
+                opacity: 0.8; 
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .heart { font-size: 16px; }
+            .joy-bubble { width: 20px; height: 20px; }
+            .spiritual-glow { width: 150px; height: 150px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wedding-container">
+        <!-- Foundation -->
+        <div class="foundation"></div>
+        
+        <!-- Hearts will be generated by JavaScript -->
+        <!-- Light rays will be generated by JavaScript -->
+        <!-- Dew particles will be generated by JavaScript -->
+        <!-- Spiritual glows will be generated by JavaScript -->
+        <!-- Joy bubbles will be generated by JavaScript -->
+        <!-- Grace drops will be generated by JavaScript -->
+        <!-- Celebration sparks will be generated by JavaScript -->
+    </div>
+
+    <script>
+        // Create animated elements dynamically
+        const container = document.querySelector('.wedding-container');
+
+        // Create floating hearts
+        for (let i = 0; i < 15; i++) {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '💖';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDelay = (Math.random() * 15) + 's';
+            heart.style.animationDuration = (12 + Math.random() * 8) + 's';
+            container.appendChild(heart);
+        }
+
+        // Create light rays
+        for (let i = 0; i < 8; i++) {
+            const ray = document.createElement('div');
+            ray.className = 'light-ray';
+            ray.style.top = Math.random() * 100 + '%';
+            ray.style.left = '-10%';
+            ray.style.width = '120%';
+            ray.style.height = '2px';
+            ray.style.animationDelay = (Math.random() * 20) + 's';
+            ray.style.animationDuration = (18 + Math.random() * 6) + 's';
+            container.appendChild(ray);
+        }
+
+        // Create dew particles
+        for (let i = 0; i < 25; i++) {
+            const dew = document.createElement('div');
+            dew.className = 'dew-particle';
+            dew.style.left = Math.random() * 100 + '%';
+            dew.style.top = Math.random() * 100 + '%';
+            dew.style.animationDelay = (Math.random() * 12) + 's';
+            dew.style.animationDuration = (10 + Math.random() * 6) + 's';
+            container.appendChild(dew);
+        }
+
+        // Create spiritual glows
+        for (let i = 0; i < 6; i++) {
+            const glow = document.createElement('div');
+            glow.className = 'spiritual-glow';
+            glow.style.left = Math.random() * 100 + '%';
+            glow.style.top = Math.random() * 100 + '%';
+            glow.style.animationDelay = (Math.random() * 18) + 's';
+            glow.style.animationDuration = (16 + Math.random() * 6) + 's';
+            container.appendChild(glow);
+        }
+
+        // Create joy bubbles
+        for (let i = 0; i < 12; i++) {
+            const bubble = document.createElement('div');
+            bubble.className = 'joy-bubble';
+            bubble.style.left = Math.random() * 100 + '%';
+            bubble.style.animationDelay = (Math.random() * 16) + 's';
+            bubble.style.animationDuration = (14 + Math.random() * 6) + 's';
+            container.appendChild(bubble);
+        }
+
+        // Create grace drops
+        for (let i = 0; i < 20; i++) {
+            const drop = document.createElement('div');
+            drop.className = 'grace-drop';
+            drop.style.left = Math.random() * 100 + '%';
+            drop.style.animationDelay = (Math.random() * 14) + 's';
+            drop.style.animationDuration = (12 + Math.random() * 4) + 's';
+            container.appendChild(drop);
+        }
+
+        // Create celebration sparks
+        for (let i = 0; i < 18; i++) {
+            const spark = document.createElement('div');
+            spark.className = 'celebration-spark';
+            spark.style.left = Math.random() * 100 + '%';
+            spark.style.top = Math.random() * 100 + '%';
+            spark.style.animationDelay = (Math.random() * 10) + 's';
+            spark.style.animationDuration = (8 + Math.random() * 4) + 's';
+            container.appendChild(spark);
+        }
+
+        // Add dynamic color changes based on song progression
+        let colorPhase = 0;
+        setInterval(() => {
+            const phases = [
+                'linear-gradient(45deg, #ffeef8, #fff5e6, #f0f8ff)', // Gentle intro
+                'linear-gradient(45deg, #fff0e6, #ffe4e1, #f5f5dc)', // Reflective verse
+                'linear-gradient(45deg, #fff8dc, #ffd700, #ffe4b5)', // Joyful chorus
+                'linear-gradient(45deg, #e6e6fa, #f0f8ff, #fff8dc)', // Spiritual bridge
+                'linear-gradient(45deg, #fffacd, #ffefd5, #fff0f5)'  // Celebration outro
+            ];
+            
+            container.style.background = phases[colorPhase % phases.length];
+            colorPhase++;
+        }, 24000); // Changes every 24 seconds for a 2-minute loop
+    </script>
+</body>
+</html>

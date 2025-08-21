@@ -14,6 +14,11 @@
     "media": "linkedin",
     "url": "https://ng.linkedin.com/in/adewara-james-074989257"
   },
+    {
+    "name": "Oluwamuyiwa's Portfolio",
+    "media": "website",
+    "url": "https://oluwamuyiwa.netlify.app"
+  },
   {
     "name": "The Breakout Code",
     "media": "website",
@@ -23,11 +28,6 @@
     "name": "MultiAI",
     "media": "website",
     "url": "https://multi-ai-7u3e.onrender.com/"
-  },
-  {
-    "name": "Oluwamuyiwa's Portfolio",
-    "media": "website",
-    "url": "https://oluwamuyiwa.onrender.com/"
   },
   {
     "name": "Portfolio Page Loader",

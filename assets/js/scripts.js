@@ -358,7 +358,7 @@ class PortfolioExplorer {
 
   hideExternalContentMessage() {
     this.externalContentMessage.style.display = "none";
-    this.welcomeScreen.style.display = "flex";
+    this.welcomeScreen.style.display = "none";
     this.statusBar.style.display = "none";
   }
 

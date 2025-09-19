@@ -9,7 +9,7 @@ class PortfolioExplorer {
       {
         name: "James - GitHub Portfolio",
         media: "github",
-        url: "https://github.com/jamesadewara/jamesadewara",
+        url: "https://github.com/jamesadewara/jamesadewara/blob/main/README.md",
       },
       {
         name: "James LinkedIn",
@@ -48,6 +48,54 @@ class PortfolioExplorer {
     this.toastMessage = document.getElementById("toast-message");
     this.frameControls = document.getElementById("frame-controls");
     this.collapseBtn = document.getElementById("collapse-btn");
+    
+    // Add external content message elements
+    this.externalContentMessage = document.getElementById("external-content-message") || this.createExternalContentMessage();
+    this.externalOpenBtn = document.getElementById("external-open-btn") || document.createElement("a");
+    this.externalBackBtn = document.getElementById("external-back-btn") || document.createElement("button");
+  }
+
+  // Create external content message if it doesn't exist
+  createExternalContentMessage() {
+    const messageDiv = document.createElement("div");
+    messageDiv.id = "external-content-message";
+    messageDiv.style.display = "none";
+    messageDiv.style.position = "absolute";
+    messageDiv.style.top = "0";
+    messageDiv.style.left = "0";
+    messageDiv.style.width = "100%";
+    messageDiv.style.height = "100%";
+    messageDiv.style.background = "var(--bg-primary)";
+    messageDiv.style.zIndex = "15";
+    messageDiv.style.flexDirection = "column";
+    messageDiv.style.alignItems = "center";
+    messageDiv.style.justifyContent = "center";
+    messageDiv.style.padding = "20px";
+    messageDiv.style.textAlign = "center";
+    
+    messageDiv.innerHTML = `
+      <div style="font-size: 4rem; color: var(--primary); margin-bottom: 20px;">
+        <i class="fas fa-external-link-alt"></i>
+      </div>
+      <div>
+        <h2 style="font-size: 2rem; margin-bottom: 12px;">External Content</h2>
+        <p style="color: var(--text-secondary); max-width: 600px; line-height: 1.6; margin-bottom: 20px;">
+          This content cannot be displayed directly in the portfolio viewer due to security restrictions. 
+          You can open it in a new tab or go back to the portfolio.
+        </p>
+        <div style="display: flex; gap: 12px; justify-content: center;">
+          <a id="external-open-btn" href="#" target="_blank" style="padding: 10px 20px; border-radius: 6px; background: var(--primary); color: white; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+            <i class="fas fa-external-link-alt"></i> Open in New Tab
+          </a>
+          <button id="external-back-btn" style="padding: 10px 20px; border-radius: 6px; background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); cursor: pointer; display: flex; align-items: center; gap: 8px;">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+          </button>
+        </div>
+      </div>
+    `;
+    
+    document.querySelector(".content-area").appendChild(messageDiv);
+    return messageDiv;
   }
 
   initializeTheme() {
@@ -79,11 +127,11 @@ class PortfolioExplorer {
   async loadProjects() {
     try {
       this.projectsContainer.innerHTML = `
-                        <div class="loading-screen">
-                            <div class="spinner"></div>
-                            <div>Loading projects...</div>
-                        </div>
-                    `;
+        <div class="loading-screen">
+          <div class="spinner"></div>
+          <div>Loading projects...</div>
+        </div>
+      `;
 
       const response = await fetch("assets/js/urls.json");
       if (!response.ok) {
@@ -152,6 +200,11 @@ class PortfolioExplorer {
       this.hideSidebar();
     });
 
+    // Bind events for external content buttons
+    this.externalBackBtn.addEventListener("click", () => {
+      this.hideExternalContentMessage();
+    });
+
     window.addEventListener("resize", () => {
       this.handleResize();
     });
@@ -163,14 +216,14 @@ class PortfolioExplorer {
 
     if (this.filteredProjects.length === 0) {
       container.innerHTML = `
-                        <div class="no-results">
-                            <div class="no-results-icon">
-                                <i class="fas fa-search"></i>
-                            </div>
-                            <div class="no-results-text">No projects found</div>
-                            <div class="no-results-subtext">Try adjusting your search terms</div>
-                        </div>
-                    `;
+        <div class="no-results">
+          <div class="no-results-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="no-results-text">No projects found</div>
+          <div class="no-results-subtext">Try adjusting your search terms</div>
+        </div>
+      `;
       return;
     }
 
@@ -183,16 +236,16 @@ class PortfolioExplorer {
       const mediaType = project.media || "website";
 
       projectEl.innerHTML = `
-                        <div class="project-icon">
-                            <i class="${icon}"></i>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-name" title="${project.name}">${project.name}</div>
-                            <div class="project-meta">
-                                <span class="media-badge">${mediaType}</span>
-                            </div>
-                        </div>
-                    `;
+        <div class="project-icon">
+          <i class="${icon}"></i>
+        </div>
+        <div class="project-info">
+          <div class="project-name" title="${project.name}">${project.name}</div>
+          <div class="project-meta">
+            <span class="media-badge">${mediaType}</span>
+          </div>
+        </div>
+      `;
 
       projectEl.addEventListener("click", () => {
         this.selectProject(project, projectEl);
@@ -241,9 +294,17 @@ class PortfolioExplorer {
     this.welcomeScreen.style.display = "none";
     this.projectFrame.style.display = "none";
     this.frameControls.style.display = "none";
+    this.hideExternalContentMessage();
 
     this.statusBar.style.display = "flex";
     this.currentUrl.textContent = project.url;
+
+    // Check if this is a URL that likely can't be embedded
+    if (this.isExternalContent(project.url)) {
+      this.showExternalContentMessage(project);
+      this.hideLoading();
+      return;
+    }
 
     if (
       project.media === "desktop" ||
@@ -264,11 +325,41 @@ class PortfolioExplorer {
 
     this.projectFrame.onerror = () => {
       this.hideLoading();
-      this.showError("Failed to load project. Opening in new tab...");
-      window.open(project.url, "_blank");
+      this.showExternalContentMessage(project);
     };
 
     this.projectFrame.src = project.url;
+  }
+
+  isExternalContent(url) {
+    // List of domains that typically block iframe embedding
+    const externalDomains = [
+      'github.com',
+      'linkedin.com',
+      'medium.com',
+      'youtube.com',
+      'youtu.be'
+    ];
+    
+    // Check if URL is a PDF
+    if (url.toLowerCase().endsWith('.pdf')) {
+      return true;
+    }
+    
+    // Check if URL matches external domains
+    return externalDomains.some(domain => url.includes(domain));
+  }
+
+  showExternalContentMessage(project) {
+    this.externalOpenBtn.href = project.url;
+    this.externalContentMessage.style.display = "flex";
+    this.statusBar.style.display = "flex";
+  }
+
+  hideExternalContentMessage() {
+    this.externalContentMessage.style.display = "none";
+    this.welcomeScreen.style.display = "flex";
+    this.statusBar.style.display = "none";
   }
 
   hideLoading() {

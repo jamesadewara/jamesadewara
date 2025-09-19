@@ -1,52 +1,21 @@
 class PortfolioExplorer {
   constructor() {
-    // Hardcoded fallback projects
     this.hardcodedProjects = [
       {
-        "name": "James Resume",
-        "media": "pdf",
-        "url": "https://jamesadewara.github.io/jamesadewara/assets/files/james_resume.pdf"
+        name: "James Resume",
+        media: "pdf",
+        url: "https://jamesadewara.github.io/jamesadewara/assets/files/james_resume.pdf",
       },
       {
-        "name": "James - GitHub Portfolio",
-        "media": "github",
-        "url": "https://jamesadewara.github.io/jamesadewara"
+        name: "James - GitHub Portfolio",
+        media: "github",
+        url: "https://github.com/jamesadewara/jamesadewara",
       },
       {
-        "name": "James LinkedIn",
-        "media": "linkedin",
-        "url": "https://ng.linkedin.com/in/adewara-james-074989257"
+        name: "James LinkedIn",
+        media: "linkedin",
+        url: "https://ng.linkedin.com/in/adewara-james-074989257",
       },
-      {
-        "name": "The Breakout Code",
-        "media": "website",
-        "url": "https://fanciful-cascaron-c30be0.netlify.app/"
-      },
-      {
-        "name": "MultiAI",
-        "media": "website",
-        "url": "https://multi-ai-7u3e.onrender.com/"
-      },
-      {
-        "name": "Oluwamuyiwa's Portfolio",
-        "media": "website",
-        "url": "https://oluwamuyiwa.onrender.com/"
-      },
-      {
-        "name": "Portfolio Page Loader",
-        "media": "website",
-        "url": "https://jamesadewara.github.io/jamesadewara/index.html"
-      },
-      {
-        "name": "EMS Demo Video",
-        "media": "desktop",
-        "url": "https://youtu.be/4PBEJXcttVY"
-      },
-      {
-        "name": "Flutter CV2 Camera Plugin",
-        "media": "plugin",
-        "url": "https://pub.dev/packages/flutter_cv2_camera"
-      }
     ];
 
     this.projects = [];
@@ -109,25 +78,24 @@ class PortfolioExplorer {
 
   async loadProjects() {
     try {
-      // Show loading state
       this.projectsContainer.innerHTML = `
-        <div class="loading-screen">
-          <div class="spinner"></div>
-          <div>Loading projects...</div>
-        </div>
-      `;
-      
-      const response = await fetch('assets/js/urls.json');
+                        <div class="loading-screen">
+                            <div class="spinner"></div>
+                            <div>Loading projects...</div>
+                        </div>
+                    `;
+
+      const response = await fetch("assets/js/urls.json");
       if (!response.ok) {
-        throw new Error('Failed to load projects');
+        throw new Error("Failed to load projects");
       }
-      
+
       this.projects = await response.json();
       this.filteredProjects = [...this.projects];
       this.renderProjects();
       this.showToast("Projects loaded successfully");
     } catch (error) {
-      console.error('Error loading projects, using hardcoded version:', error);
+      console.error("Error loading projects, using hardcoded version:", error);
       this.projects = [...this.hardcodedProjects];
       this.filteredProjects = [...this.hardcodedProjects];
       this.renderProjects();
@@ -136,27 +104,22 @@ class PortfolioExplorer {
   }
 
   bindEvents() {
-    // Toggle sidebar
     document.getElementById("toggle-sidebar").addEventListener("click", () => {
       this.toggleSidebar();
     });
 
-    // Collapse sidebar
     this.collapseBtn.addEventListener("click", () => {
       this.toggleSidebarCollapse();
     });
 
-    // Fullscreen
     document.getElementById("fullscreen-btn").addEventListener("click", () => {
       this.toggleFullscreen();
     });
 
-    // Search
     this.searchInput.addEventListener("input", (e) => {
       this.filterProjects(e.target.value);
     });
 
-    // Status bar actions
     document.getElementById("refresh-btn").addEventListener("click", () => {
       this.refreshCurrentProject();
     });
@@ -169,7 +132,6 @@ class PortfolioExplorer {
       this.openInNewTab();
     });
 
-    // Frame controls
     document.getElementById("back-btn").addEventListener("click", () => {
       if (this.projectFrame.contentWindow) {
         this.projectFrame.contentWindow.history.back();
@@ -186,12 +148,12 @@ class PortfolioExplorer {
       this.refreshCurrentProject();
     });
 
-    // Mobile overlay
+
     this.mobileOverlay.addEventListener("click", () => {
       this.hideSidebar();
     });
 
-    // Window resize
+ 
     window.addEventListener("resize", () => {
       this.handleResize();
     });
@@ -203,14 +165,14 @@ class PortfolioExplorer {
 
     if (this.filteredProjects.length === 0) {
       container.innerHTML = `
-        <div class="no-results">
-          <div class="no-results-icon">
-            <i class="fas fa-search"></i>
-          </div>
-          <div class="no-results-text">No projects found</div>
-          <div class="no-results-subtext">Try adjusting your search terms</div>
-        </div>
-      `;
+                        <div class="no-results">
+                            <div class="no-results-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="no-results-text">No projects found</div>
+                            <div class="no-results-subtext">Try adjusting your search terms</div>
+                        </div>
+                    `;
       return;
     }
 
@@ -223,16 +185,16 @@ class PortfolioExplorer {
       const mediaType = project.media || "website";
 
       projectEl.innerHTML = `
-        <div class="project-icon">
-          <i class="${icon}"></i>
-        </div>
-        <div class="project-info">
-          <div class="project-name" title="${project.name}">${project.name}</div>
-          <div class="project-meta">
-            <span class="media-badge">${mediaType}</span>
-          </div>
-        </div>
-      `;
+                        <div class="project-icon">
+                            <i class="${icon}"></i>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-name" title="${project.name}">${project.name}</div>
+                            <div class="project-meta">
+                                <span class="media-badge">${mediaType}</span>
+                            </div>
+                        </div>
+                    `;
 
       projectEl.addEventListener("click", () => {
         this.selectProject(project, projectEl);
@@ -251,7 +213,7 @@ class PortfolioExplorer {
       github: "fab fa-github",
       pdf: "fas fa-file-pdf",
       linkedin: "fab fa-linkedin",
-      plugin: "fas fa-puzzle-piece"
+      plugin: "fas fa-puzzle-piece",
     };
 
     if (project.url.includes("github")) return "fab fa-github";
@@ -475,7 +437,8 @@ class PortfolioExplorer {
       this.toast.style.background = "linear-gradient(135deg, #3b82f6, #2563eb)";
     } else {
       icon.className = "fas fa-check";
-      this.toast.style.background = "var(--gradient-primary)";
+      this.toast.style.background =
+        "linear-gradient(135deg, var(--primary), var(--primary-dark))";
     }
 
     this.toast.classList.add("show");
@@ -502,7 +465,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const explorer = new PortfolioExplorer();
 });
 
-// Handle fullscreen changes
+
 document.addEventListener("fullscreenchange", () => {
   const fullscreenBtn = document.getElementById("fullscreen-btn");
   const icon = fullscreenBtn.querySelector("i");
@@ -516,7 +479,6 @@ document.addEventListener("fullscreenchange", () => {
   }
 });
 
-// Prevent right-click context menu on iframe (optional)
 document.addEventListener("contextmenu", (e) => {
   if (e.target.tagName === "IFRAME") {
     e.preventDefault();

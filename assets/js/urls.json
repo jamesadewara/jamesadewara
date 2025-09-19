@@ -14,10 +14,20 @@
     "media": "linkedin",
     "url": "https://ng.linkedin.com/in/adewara-james-074989257"
   },
-    {
+  {
+    "name": "Music Converter",
+    "media": "website",
+    "url": "https://music-converter-pgyd.onrender.com/"
+  },
+  {
+    "name": "Edunovus Global",
+    "media": "website",
+    "url": "https://www.edunovusglobal.com"
+  },
+  {
     "name": "Oluwamuyiwa's Portfolio",
     "media": "website",
-    "url": "https://oluwamuyiwa.netlify.app"
+    "url": "https://eaoluwamuyiwa.netlify.app/"
   },
   {
     "name": "The Breakout Code",
@@ -28,6 +38,21 @@
     "name": "MultiAI",
     "media": "website",
     "url": "https://multi-ai-7u3e.onrender.com/"
+  },
+  {
+    "name": "Paai Doc Previewer Vs Code Extension",
+    "media": "github",
+    "url": "https://github.com/jamesadewara/paai-doc-previewer"
+  },
+  {
+    "name": "Investment Calculator",
+    "media": "github",
+    "url": "https://github.com/jamesadewara/Angular-Investment-Calculator"
+  },
+  {
+    "name": "Ecommerce Template",
+    "media": "github",
+    "url": "https://github.com/jamesadewara/EcoSale"
   },
   {
     "name": "Portfolio Page Loader",
@@ -41,7 +66,7 @@
   },
   {
     "name": "Flutter CV2 Camera Plugin",
-    "media": "plugin",
+    "media": "github",
     "url": "https://github.com/jamesadewara/flutter_cv2_camera"
   }
 ]

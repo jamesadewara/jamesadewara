@@ -148,12 +148,10 @@ class PortfolioExplorer {
       this.refreshCurrentProject();
     });
 
-
     this.mobileOverlay.addEventListener("click", () => {
       this.hideSidebar();
     });
 
- 
     window.addEventListener("resize", () => {
       this.handleResize();
     });
@@ -214,6 +212,7 @@ class PortfolioExplorer {
       pdf: "fas fa-file-pdf",
       linkedin: "fab fa-linkedin",
       plugin: "fas fa-puzzle-piece",
+      article: "fas fa-newspaper"
     };
 
     if (project.url.includes("github")) return "fab fa-github";
@@ -464,7 +463,6 @@ class PortfolioExplorer {
 document.addEventListener("DOMContentLoaded", () => {
   const explorer = new PortfolioExplorer();
 });
-
 
 document.addEventListener("fullscreenchange", () => {
   const fullscreenBtn = document.getElementById("fullscreen-btn");

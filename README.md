@@ -1,4 +1,4 @@
-# 👋 Hi there, I'm **Adewara James** — aka **Amex**
+# 👋 Hi there, I'm **James Adewara**
 
 ## 🚀 **Full-Stack Developer | Mobile Developer | AI Enthusiast | Aspiring Researcher, Robotics, and Cloud**
 

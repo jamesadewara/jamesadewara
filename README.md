@@ -1,6 +1,6 @@
 # 👋 Hi there, I'm **Adewara James** — aka **Amex**
 
-## 🚀 **Full-Stack Developer | Mobile Developer | AI Enthusiast | Cloud Practitioner**
+## 🚀 **Full-Stack Developer | Mobile Developer | AI Enthusiast | Aspiring Researcher, Robotics, and Cloud**
 
 I build scalable solutions that align with business needs, specializing in:
 - **Frontend**: React, Angular, TypeScript

@@ -3,12 +3,12 @@
 ## 🚀 **Full-Stack Developer | Mobile Developer | AI Enthusiast | Aspiring Researcher, Robotics, and Cloud**
 
 I build scalable solutions that align with business needs, specializing in:
-- **Frontend**: React, Angular, TypeScript
+- **Frontend**: React, TypeScript, TailwindCss, Html5, Scss
 - **Backend**: Django, Node.js  
 - **Mobile**: Flutter, React Native
 - **AI/ML**: PyTorch
 - **Cloud**: AWS, Docker, CI/CD
-- **Automation**: n8n, python
+- **Automation**: python
 
 Let's create impactful solutions together! 🌟
 

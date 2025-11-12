@@ -1,6 +1,6 @@
 # 👋 Hi there, I'm **James Adewara**
 
-## 🚀 **Full-Stack Developer | Mobile Developer | AI Enthusiast | Aspiring Researcher, Robotics, and Cloud**
+## 🚀 **Full-Stack Developer | Mobile Developer | AI Enthusiast | Aspiring and Cloud**
 
 I build scalable solutions that align with business needs, specializing in:
 - **Frontend**: React, TypeScript, TailwindCss, Html5, Scss

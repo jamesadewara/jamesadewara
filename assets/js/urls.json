@@ -1,28 +1,23 @@
 [
   {
-    "name": "James Resume",
-    "media": "pdf",
-    "url": "https://jamesadewara.github.io/jamesadewara/assets/files/james_resume.pdf"
-  },
-  {
-    "name": "James - GitHub Portfolio",
-    "media": "github",
-    "url": "https://github.com/jamesadewara/jamesadewara"
-  },
-  {
-    "name": "James LinkedIn",
-    "media": "linkedin",
-    "url": "https://ng.linkedin.com/in/adewara-james-074989257"
-  },
-  {
-    "name": "Music Converter",
-    "media": "website",
-    "url": "https://music-converter-pgyd.onrender.com/"
-  },
-  {
     "name": "Edunovus Global",
     "media": "website",
     "url": "https://www.edunovusglobal.com"
+  },
+  {
+    "name": "My Brand",
+    "media": "website",
+    "url": "https://spatialdesign3d.site/"
+  },
+  {
+    "name": "Dwyzmax Eccomerce",
+    "media": "website",
+    "url": "https://dwyzmax.netlify.app/"
+  },
+  {
+    "name": "Grand Real Estate",
+    "media": "website",
+    "url": "https://grand-estate.netlify.app/"
   },
   {
     "name": "Oluwamuyiwa's Portfolio",
@@ -40,6 +35,16 @@
     "url": "https://multi-ai-7u3e.onrender.com/"
   },
   {
+    "name": "Solimentor Artist",
+    "media": "website",
+    "url": "https://solimentor.netlify.app/"
+  },
+  {
+    "name": "Music Converter",
+    "media": "website",
+    "url": "https://music-converter-pgyd.onrender.com/"
+  },
+  {
     "name": "Paai Doc Previewer Vs Code Extension",
     "media": "github",
     "url": "https://github.com/jamesadewara/paai-doc-previewer"
@@ -53,17 +58,6 @@
     "name": "Ecommerce Template",
     "media": "github",
     "url": "https://github.com/jamesadewara/EcoSale"
-  },
- 
-    {
-    "name": "Dwyzmax Eccomerce",
-    "media": "website",
-    "url": "https://dwyzmax.netlify.app/"
-  },
-  {
-    "name": "Grand Real Estate",
-    "media": "website",
-    "url": "https://grand-estate.netlify.app/"
   },
   {
     "name": "Portfolio Page Loader",
@@ -80,14 +74,24 @@
     "media": "github",
     "url": "https://github.com/jamesadewara/flutter_cv2_camera"
   },
-    {
-    "name": "Solimentor Artist",
-    "media": "website",
-    "url": "https://solimentor.netlify.app/"
-  },
   {
     "name": "Diabetes Prediction App Article",
     "media": "article",
     "url": "https://www.linkedin.com/pulse/journey-building-diabetes-prediction-app-day-guide-james-adewara-zklwf/?trackingId=MgpatV6uRv21bezzUPJTKA%3D%3D"
+  },
+  {
+    "name": "James Resume",
+    "media": "pdf",
+    "url": "https://jamesadewara.github.io/jamesadewara/assets/files/james_resume.pdf"
+  },
+  {
+    "name": "James - GitHub Portfolio",
+    "media": "github",
+    "url": "https://github.com/jamesadewara/jamesadewara"
+  },
+  {
+    "name": "James LinkedIn",
+    "media": "linkedin",
+    "url": "https://www.linkedin.com/in/james-adewara-b0b955290"
   }
 ]

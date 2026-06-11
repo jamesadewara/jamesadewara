@@ -1,7 +1,7 @@
 <div align="center">
 
 # James Adewara
-### Cloud DevOps Engineer · AltSchool Africa · Lagos, Nigeria
+### DevOps Engineer · Access Bank (SIWES) · AltSchool Africa · Lagos, Nigeria
 
 *I provision infrastructure, containerize workloads, and automate everything in between.*
 
@@ -16,11 +16,9 @@
 
 ## About
 
-I'm a Cloud DevOps Engineer in training at **AltSchool Africa**, focused on building secure, scalable, and automated cloud infrastructure. My work spans AWS, Kubernetes, Terraform, and CI/CD pipelines — and I write about it too.
+I'm a Cloud DevOps Engineer currently completing my SIWES internship at **Access Bank** as a DevOps Engineer, alongside my training at **AltSchool Africa**. My work spans AWS, Kubernetes, Terraform, and CI/CD pipelines — and I write about it too.
 
 I've shipped production-grade infrastructure across real projects: multi-service EKS clusters, serverless architectures, containerized deployment pipelines, and secure private-subnet deployments with Ansible automation. I also build the applications that run on that infrastructure, which means I understand both sides of a deployment.
-
-Currently seeking a **SIWES 2026 internship** where I can contribute to cloud infrastructure, DevOps, or platform engineering work.
 
 ---
 
@@ -174,7 +172,7 @@ I document what I build.
 
 <div align="center">
 
-**Currently seeking a SIWES 2026 internship in Cloud Infrastructure, DevOps, or Platform Engineering.**
+**DevOps Engineer @ Access Bank · AltSchool Africa Cloud Engineering Track**
 
 [LinkedIn](https://www.linkedin.com/in/james-adewara) · [Linktree](https://linktr.ee/jamesadewara) · [Medium](https://medium.com/@jamesadewara1)
 

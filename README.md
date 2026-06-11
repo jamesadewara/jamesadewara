@@ -12,15 +12,11 @@
 
 </div>
 
----
-
 ## About
 
 I'm a Cloud DevOps Engineer currently completing my SIWES internship at **Access Bank** as a DevOps Engineer, alongside my training at **AltSchool Africa**. My work spans AWS, Kubernetes, Terraform, and CI/CD pipelines — and I write about it too.
 
 I've shipped production-grade infrastructure across real projects: multi-service EKS clusters, serverless architectures, containerized deployment pipelines, and secure private-subnet deployments with Ansible automation. I also build the applications that run on that infrastructure, which means I understand both sides of a deployment.
-
----
 
 ## Core Stack
 
@@ -57,8 +53,6 @@ I've shipped production-grade infrastructure across real projects: multi-service
 ![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=flat&logo=rabbitmq&logoColor=white)
 
 </div>
-
----
 
 ## Featured Projects
 
@@ -157,7 +151,6 @@ I document what I build.
 - [Secure Web Application Deployment on AWS using Ansible and Load Balancing](https://medium.com/@jamesadewara1/secure-web-application-deployment-on-aws-using-ansible-and-load-balancing-c1fc718db461)
 - [Why Ansible? Ansible is an agentless automation tool…](https://medium.com/@jamesadewara/why-ansible-ansible-is-an-agentless-automation-tool-0f461664154c)
 
----
 
 ## GitHub Stats
 
